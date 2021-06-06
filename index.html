@@ -10,9 +10,10 @@
 <body>
     <div class="main-conten">
         <h1 class="heading">REGISTRATION NUMBERS</h1>
-       <label for="regNo" style="font-weight: bolder">Registration Number:</label>  <input type="text" placeholder="" name="text-box"><br>
+       <label for="regNo" style="font-weight: bolder">Registration Number:</label>  <input type="text" placeholder="" id="text-box" value="" class="regNos"><br>
+       <!-- <label for="value"></label> <input type="text" id="value" value="" placeholder=""> -->
 
-       <button style="margin: 30px; margin-left: 265px;">ADD</button><br>
+       <button class="addButton" style="margin: 30px; margin-left: 265px; background-color: burlywood; size: 40px;">ADD</button><br>
 
       <label for="towns" style="font-weight: bolder">Town:</label> <input type="radio" name="town" value="Stellenbosch">
        <span class="label">Stellenbosch</span>
@@ -21,11 +22,18 @@
        <input type="radio" name="town" value="Paarl">
        <span class="label">Paarl</span> <br>
 
-      <button style="margin: 30px; margin-left: 260px;">SHOW</button>
+      <button class="showButton" style="margin: 30px; margin-left: 260px; background-color: burlywood; size: 40px;">SHOW</button>
+
+      <!-- Parent tag where we add 
+        item as child -->
+        <ul id="parent">
+            
+        </ul>
 
     </div>
     
 </body>
 
+<script src="registration_factory.js" charset="utf-8"></script>
 <script src="registration_number.js" charset="utf-8"></script>
 </html>

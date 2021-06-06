@@ -1,8 +1,13 @@
-/* body{
-    background-color:rosybrown;
-} */
+ /* body{
+    background-color: beige;
+}  */
 .heading{
     border: 10px solid burlywood;
     text-align: center;
     
+}
+button{
+    box-sizing: content-box;
+    border-color: burlywood;
+    padding: 3px 12px;
 }
