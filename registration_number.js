@@ -4,6 +4,7 @@ var showAllButton = document.querySelector(".showAll")
 var regNoElem = document.querySelector(".regNos")
 var errorMsgElem = document.querySelector(".errorMessage");
 var addFilterElem =  document.querySelector(".filteringReg");
+var showAllElem = document.querySelector(".showingAllReg");
 
 var existingRegNumbers = JSON.parse(localStorage.getItem('regNumbers'));
 var displayReg = document.querySelector(".showReg");
@@ -95,13 +96,14 @@ function filterTowns(){
 showButtonElem.addEventListener('click', filterTowns)
 
 function showAllReg(){
+    showAllElem.innerHTML = '';
 
     if(localStorage['regNumbers']){
         for(var i = 0; i < existingRegNumbers.length; i++){
             var newRegElement = document.createElement("button")
             newRegElement.innerText = existingRegNumbers[i];
             newRegElement.classList.add("regPlates");
-            document.getElementById("showAll").appendChild(newRegElement);
+            showAllElem.appendChild(newRegElement);
             document.getElementById("filteredTowns").style.display = "none"; 
             document.getElementById("display").style.display = "none"; 
         }
