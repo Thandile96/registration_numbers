@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,34 +8,58 @@
     <title>Document</title>
     <link rel="stylesheet" href="registration_number.css">
 </head>
+
 <body>
     <h1 class="heading">REGISTRATION NUMBERS</h1>
     <div class="main-content">
         <div class="errorMessage"></div>
-       <label for="regNo" style="font-weight: bolder">Registration Number:</label>  <input type="text" placeholder="" id="text-box" value="" class="regNos"><br>
-       <!-- <label for="value"></label> <input type="text" id="value" value="" placeholder=""> -->
-
-       <button class="addButton" style="margin: 30px; margin-left: 265px; background-color: burlywood; size: 40px;">ADD</button><br>
-
-      <label for="towns" style="font-weight: bolder">Town:</label> <input type="radio" name="town" value="Stellenbosch">
-       <span class="label">Stellenbosch</span>
-       <input type="radio" name="town" value="Kuilsriver">
-       <span class="label">Kuilsriver</span>
-       <input type="radio" name="town" value="Paarl">
-       <span class="label">Paarl</span> <br>
-
-      <button class="showButton" style="margin: 30px; margin-left: 260px; background-color: burlywood; size: 40px;">SHOW</button>
-
-      <!-- Parent tag where we add 
-        element as child -->
-        <ul id="parent">
-            
-        </ul>
-
-    </div>
+        <label for="regNo" style="font-weight: bolder">Registration Number:</label> <input type="text" placeholder="CJ 123-45"
+            id="text-box" value="" class="regNos"><br>
     
+        <button class="addButton"
+            style="margin: 30px; margin-left: 265px; background-color: lightgrey; size: 40px;">ADD</button><br>
+
+        <label for="towns" style="font-weight: bolder">Town:</label>
+        <input type="radio" name="town" value="CL">
+        <span class="label">Stellenbosch</span>
+        <input type="radio" name="town" value="CF">
+        <span class="label">Kuilsriver</span>
+        <input type="radio" name="town" value="CJ">
+        <span class="label">Paarl</span> <br>
+
+        <button class="showButton"
+            style="margin: 30px; margin-left: 80px; background-color: lightgrey; size: 40px;">SHOW</button>
+
+        <button class="showAll" style="margin: 30px; margin-left: 41px; background-color: lightgrey; size: 40px;">SHOW ALL</button>
+
+    
+
+        <div>
+            <!-- Parent tag where we add 
+            element as child -->
+            <ul id="display" class="addingRegNumbers">
+
+            </ul>
+        </div>
+
+        <div>
+            <ul id="filteredTowns" class="filteringReg"></ul>
+        </div>
+
+        <div>
+            <!-- Parent tag where we add 
+            element as child -->
+            <ul id="showAll" class="showingAllReg">
+
+            </ul>
+        </div>
+    </div>
+     
+   
+
 </body>
 
 <script src="registration_factory.js" charset="utf-8"></script>
 <script src="registration_number.js" charset="utf-8"></script>
+
 </html>
