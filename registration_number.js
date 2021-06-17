@@ -34,12 +34,12 @@ function addRegNumber(){
     newRegElement.classList.add("regPlates");
 
     if(displayArea == 'Invalid registration number'){
-        errorMsgElem.innerText = "Please enter a valid registration number!"
+        errorMsgElem.innerText = "Please enter a valid registration number for these 3 towns: CF/ CJ/ CL"
         errorMsgElem.classList.add("errorMsg");
         setTimeout(function(){
             errorMsgElem.innerText = "";
 
-        }, 1900);
+        }, 2300);
         return;
     }
 
@@ -49,7 +49,7 @@ function addRegNumber(){
         setTimeout(function(){
             errorMsgElem.innerText = "";
 
-        }, 1900);
+        }, 2300);
         return;
 
     }
