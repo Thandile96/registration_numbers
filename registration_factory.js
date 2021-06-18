@@ -9,12 +9,16 @@ function registration(existingRegNumbers){
         var reg = /^((CJ|CL|CF)\-([0-9]){5})+$/;
         var reg2 = /^((CJ|CL|CF)\s([0-9]){3}\-([0-9]){2})+$/;
         var reg3 = /^((CJ|CL|CF)\s([0-9]){5})+$/;
+        var reg4 = /^((CJ|CL|CF)\s([0-9]){3}\s([0-9]){3})+$/;
+        var reg5 = /^((CJ|CL|CF)\s([0-9]{4}))+$/;
 
         var validation = reg.test(regNumber);
         var validation2 = reg2.test(regNumber);
         var validation3 = reg3.test(regNumber);
+        var validation4 = reg4.test(regNumber);
+        var validation5 = reg5.test(regNumber);
         
-        if(validation || validation2 || validation3){
+        if(validation || validation2 || validation3 || validation4 || validation5){
             if(!enteredRegNo.includes(regNumber)){
                 enteredRegNo.push(regNumber);
                 return regNumber;
@@ -45,7 +49,9 @@ function registration(existingRegNumbers){
                 filteredTowns.push(enteredRegNo[i])
             }
         }
-       return filteredTowns;   
+       return filteredTowns;  
+       
+       
     }
 
     function getFilteredTowns(){

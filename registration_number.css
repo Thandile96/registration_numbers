@@ -1,17 +1,28 @@
 body{
     margin: 0px;
     padding: 0px;
+
 }  
 .heading{
     padding: 10px;
     border: 10px solid cornflowerblue;
-    height: 100px;
+    height: 80px;
     text-align: center;
     background-color: lightgrey;
     margin-bottom: 1em;
     font-size: 50px;
     
     
+}
+.instruction{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    font-style: oblique;
+}
+.instruction2{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    font-style: oblique;
 }
 button{
     box-sizing: content-box;
@@ -21,6 +32,7 @@ button{
 }
 .main-content{
     margin-left: 28em;
+    margin-top: 3em;
 }
 
 .main-content .addingRegNumbers{
@@ -36,7 +48,8 @@ button{
 
 .regPlates{
     margin: 5px;
-    padding: 12px 28px;
+    margin-top: 1.5em;
+    padding: 10px 22px;
     font-size: large;
     border-radius: 18%;
     border-color: cornflowerblue;
@@ -47,6 +60,13 @@ button{
     color: red;
     margin-bottom: 2em;
 }
+.msgAlert{
+    color: cornflowerblue;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    margin-left: -5em;
+
+}
 
 @media(max-width: 780px){
     .heading{
@@ -54,6 +74,23 @@ button{
         font-size: 35px;
         width: 80%;
     }
+    .main-content .input{
+        margin: 10px 0;
+        width: auto;
+    }
+    .instruction{
+        display: block;
+        font-size: small;
+        
+    }
+
+    .instruction2{
+        display: block;
+        font-size: small;
+        margin: -86px 0px 16px 100px;
+        
+    }
+    
     .main-content{
         display: block;
         margin-left: 5px;

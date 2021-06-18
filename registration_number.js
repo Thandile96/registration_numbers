@@ -5,6 +5,8 @@ var regNoElem = document.querySelector(".regNos")
 var errorMsgElem = document.querySelector(".errorMessage");
 var addFilterElem =  document.querySelector(".filteringReg");
 var showAllElem = document.querySelector(".showingAllReg");
+var clearButtonElem = document.querySelector(".clear")
+var msgAlertElem = document.querySelector(".msgAlert");
 
 var existingRegNumbers = JSON.parse(localStorage.getItem('regNumbers'));
 var displayReg = document.querySelector(".showReg");
@@ -34,7 +36,7 @@ function addRegNumber(){
     newRegElement.classList.add("regPlates");
 
     if(displayArea == 'Invalid registration number'){
-        errorMsgElem.innerText = "Please enter a valid registration number for these 3 towns: CF/ CJ/ CL"
+        errorMsgElem.innerText = "Please enter a valid registration number for the specified towns only: CF/ CJ/ CL"
         errorMsgElem.classList.add("errorMsg");
         setTimeout(function(){
             errorMsgElem.innerText = "";
@@ -76,9 +78,6 @@ function filterTowns(){
     var checkedRadioButton = document.querySelector("input[name='town']:checked");
 
         if(checkedRadioButton){
-           
-            // var checkClass = document.getElementById("filteredTowns");
-            //  checkClass.classList.remove('regPlates')
             
             var filtered_Towns = regInstance.townFilter(checkedRadioButton.value);
             for(var i = 0; i < filtered_Towns.length; i++){
@@ -89,6 +88,21 @@ function filterTowns(){
                 document.getElementById("display").style.display = "none"; 
 
             }
+            if(filtered_Towns.length == 0){
+                
+                document.getElementById("display").style.display = "none"; 
+                
+                msgAlertElem.innerHTML = "There is no registration number for the selected town"
+                
+                setTimeout(function(){
+                    msgAlertElem.innerText = "";
+        
+                }, 2300);
+            }
+            
+            
+                
+            
         }
         checkedRadioButton.checked = false;
 
@@ -112,3 +126,9 @@ function showAllReg(){
    
 }
 showAllButton.addEventListener('click', showAllReg)
+
+function clearLocal(){
+    localStorage.clear();
+    location.reload();
+}
+clearButtonElem.addEventListener('click', clearLocal)

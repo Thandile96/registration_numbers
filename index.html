@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration Numbers</title>
     <link rel="stylesheet" href="registration_number.css">
 </head>
 
 <body>
     <h1 class="heading">REGISTRATION NUMBERS</h1>
+    <p class="instruction" style="margin-left: 8em; margin-top: -2em;">Please enter a registration number for each of the specified towns only. Registration numbers entered should be for Paarl(CJ), Stellenbosch(CL) and Kuilsriver(CF).<br> <br></p>
+    <p class="instruction2" style="margin-left: 20em; margin-top: -2em;">Format for registration numbers to be followed includes <b>CJ 111 111</b>, <b>CF 2222</b> or <b>CL 96785</b></p>
     <div class="main-content">
         <div class="errorMessage"></div>
         <label for="regNo" style="font-weight: bolder">Registration Number:</label> <input type="text" placeholder="CJ 123-45"
@@ -26,11 +28,12 @@
         <span class="label">Kuilsriver</span>
         <input type="radio" name="town" value="CJ">
         <span class="label">Paarl</span> <br>
-
+        <br>
         <button class="showButton"
-            style="margin: 30px; margin-left: 80px; background-color: lightgrey; size: 40px;">SHOW</button>
+            style="margin: 10px; margin-left: 14px; background-color: lightgrey; size: 40px;">SHOW</button>
 
-        <button class="showAll" style="margin: 30px; margin-left: 41px; background-color: lightgrey; size: 40px;">SHOW ALL</button>
+        <button class="showAll" style="margin: 10px; margin-left: 17px; background-color: lightgrey; size: 40px;">SHOW ALL</button>
+        <button class="clear" style="margin: 10px; margin-left: 20px; background-color: lightgrey; size: 40px;">CLEAR</button>
 
     
 
@@ -44,7 +47,10 @@
 
         <div>
             <ul id="filteredTowns" class="filteringReg"></ul>
+            <ul id="filteredTowns2"  class="msgAlert"></ul>
         </div>
+
+        
 
         <div>
             <!-- Parent tag where we add 
